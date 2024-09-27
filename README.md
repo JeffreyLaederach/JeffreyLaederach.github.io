@@ -2,4 +2,4 @@
 
 **My Personal Website**
 
-https://jeffreylaederach.github.io/
+[https://jeffreylaederach.com](https://jeffreylaederach.com)

@@ -1,7 +1,69 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>Jeffrey Laederach's Personal Website</p>
-</body>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jeffrey Laederach</title>
+    <link rel="icon" type="img/ico" href="img/favicon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Jeffrey Laederach</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#home">Home</a>
+            <a class="nav-link" href="#portfolio" data-bs-toggle="modal" data-bs-target="#portfolioModal">Portfolio</a>
+            <a class="nav-link" href="files/JeffreyLaederachResume.pdf" target="_blank">Resume</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover translucent-background">
+        <h1 class="cover-heading">About Me</h1>
+        <div class="hline"></div>
+        <p class="lead">Hello, I'm Jeffrey. I'm currently a Junior at Manhattan University pursuing a B.S. in Mechanical Engineering with a Concentration in Applied Mathematics and a Minor in Business. 
+            I'm passionate about energy, buildings, math, data science, software development, and engineering.</p>
+        <div class="social-media-icons">
+            <a href="https://www.linkedin.com/in/jeffrey-laederach"><i class="bi bi-linkedin" style="font-size: 2rem;"></i></a>
+            <a href="https://github.com/JeffreyLaederach"><i class="bi bi-github" style="font-size: 2rem;"></i></a>
+            <a href="mailto: jlaederach@outlook.com"><i class="bi bi-envelope-fill" style="font-size: 2rem;"></i></a>
+          </div>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Copyright © 2024 Jeffrey Laederach - All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+  <div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="portfolioModalLabel">Coming Soon!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          In the meantime, you can view my public code repositories on GitHub or projects on LinkedIn!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
 </html>

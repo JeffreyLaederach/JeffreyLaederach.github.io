@@ -1,0 +1,124 @@
+html,
+body { 
+    background-image: url('../img/background.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat;  
+    background-attachment: fixed; 
+    background-position: center; 
+    height: 100%;
+} 
+
+.cover-container { 
+    z-index: 1; 
+    position: relative; 
+    max-width: 42em;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 18px;
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+a,
+a:focus,
+a:hover {
+  color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.btn {
+    background-color: #002060;
+    color: #ffffff;
+    padding: 5px 12px;
+}
+
+.btn:hover {
+    background-color: #012e87;
+    color: #ffffff;
+}
+
+.hline {
+    width: 120px;
+    height: 2px;
+    background-color: #ffffffb1;
+    margin: 12px auto 0 auto;
+}
+
+.translucent-background { 
+    background-color: rgba(0, 0, 0, 0.55);  
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+.cover {
+  padding: 0 1.5rem;
+}
+
+.modal-title { 
+    color: #002060; 
+    font-weight: 700;
+    font-size: 12px;
+}  
+
+.modal-body {
+    color: #012e87; 
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.mastfoot {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+}

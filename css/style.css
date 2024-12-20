@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 120px;
     height: 2px;
     background-color: #ffffffb1;
-    margin: 12px auto 0 auto;
+    margin: 10px auto 0 auto;
 }
 
 .translucent-background { 
@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: 700;
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, 0.67);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
@@ -121,4 +121,25 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
   font-weight: 400;
   font-size: 16px;
+}
+
+.social-media-icons a {
+  color: #002060;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  padding: 10px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.social-media-icons a:hover {
+  color: #012e87;
+  background-color: rgba(255, 255, 255, 0.7);
 }

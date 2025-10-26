@@ -1,68 +1,205 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeffrey Laederach</title>
+  <link rel="icon" href="img/favicon.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
-    <title>Jeffrey Laederach</title>
-    <link rel="icon" type="img/ico" href="img/favicon.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  </head>
+    body {
+      font-family: "Libre Franklin", sans-serif;
+      color: #fff;
+      background-image: url('img/background.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
 
-  <body class="text-center">
+    .cover-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand">Jeffrey Laederach</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="#home">Home</a>
-            <a class="nav-link" href="#portfolio" data-bs-toggle="modal" data-bs-target="#portfolioModal">Portfolio</a>
-          </nav>
-        </div>
-      </header>
+    .cover-section h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
 
-      <main role="main" class="inner cover translucent-background">
-        <h1 class="cover-heading">About Me</h1>
-        <div class="hline"></div>
-        <p class="lead">Hello, I'm currently a Junior at Manhattan University pursuing a B.S. in Mechanical Engineering with a Concentration in Applied Mathematics and a Minor in Business. 
-            I'm passionate about entrepreneurship, engineering, data science, and software development.</p>
-        <div class="social-media-icons">
-            <a href="https://www.linkedin.com/in/jeffrey-laederach"><i class="bi bi-linkedin" style="font-size: 2rem;"></i></a>
-            <a href="https://github.com/JeffreyLaederach"><i class="bi bi-github" style="font-size: 2rem;"></i></a>
-            <a href="mailto: jlaederach@outlook.com"><i class="bi bi-envelope-fill" style="font-size: 2rem;"></i></a>
-          </div>
-      </main>
+    .cover-section p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 1rem auto;
+    }
 
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p>© 2025 Jeffrey Laederach - All Rights Reserved.</p>
-        </div>
-      </footer>
-    </div>
+    .nav-link {
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 600;
+    }
 
-  <div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="portfolioModalLabel">Coming Soon!</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          In the meantime, you can view my public code repositories on GitHub or projects on LinkedIn!
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-        </div>
+    .nav-link.active,
+    .nav-link:hover {
+      color: #ffffff;
+      border-bottom: 2px solid #ffffff;
+    }
+
+    .navbar-toggler {
+      border-color: transparent;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .navbar-toggler:focus {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .blog-section {
+      background-color: #ffffff;
+      color: #002060;
+      padding: 40px;
+    }
+
+    .blog-section h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .blog-section h4 {
+      color: #00206084;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .blog-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .blog-hline {
+      width: 80px;
+      height: 2px;
+      background-color: #00206084;
+      margin-bottom: 40px;
+    }
+
+    .social-media-icons a {
+      color: #ffffff;
+      width: 52px;
+      height: 52px;
+      padding: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-media-icons a:hover {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100" tabindex="0">
+
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navContent">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-  
-  <script src="js/bootstrap.bundle.min.js"></script>
+  </nav>
 
-  </body>
+  <section id="home" class="cover-section">
+    <h1>Jeffrey Laederach</h1>
+    <p>Hello, I'm currently a Junior at Manhattan University pursuing a B.S. in Mechanical Engineering with a Concentration in Applied Mathematics and a Minor in Business.</p>
+    <div class="social-media-icons">
+      <a href="https://www.linkedin.com/in/jeffrey-laederach"><i class="bi bi-linkedin" style="font-size: 2rem;"></i></a>
+      <a href="https://github.com/JeffreyLaederach"><i class="bi bi-github" style="font-size: 2rem;"></i></a>
+      <a href="mailto:jlaederach@outlook.com"><i class="bi bi-envelope-fill" style="font-size: 2rem;"></i></a>
+    </div>
+  </section>
 
+  <section id="blog" class="blog-section">
+    <div class="container">
+      <h2>Blog Posts</h2>
+      <p><i>The official Jeffrey Laederach blog on the internet. Enjoy!</i></p>
+      <div class="blog-hline"></div>
+    </div>
+    <div class="container">
+      <h4>October 26, 2025</h4>
+      <h3>In the Beginning</h3>
+      <br>
+      <p>Hi, I'm Jeffrey! You've found my personal website and blog... lucky you! 
+        This is where I'll be posting my thoughts, experiences, and insights on various topics that interest me.
+        You can expect to find posts covering a range of subjects including technology, engineering, entrepreneurship, finance, careers, hobbies, personal development, and much more.
+      </p>
+      <p>Now for a little about me... at the time of this post I am a 3rd year Mechanical Engineering major at Manhattan University in New York City.
+        I will be graduating in May 2027 with a Bachelor of Science in Mechanical Engineering with a Concentration in Applied Mathematics and a Minor in Business.
+        Currently, my career has centered around the energy industry specifically in relation to demand-side energy management and building infrastructure solutions.
+        My experience so far covers project management, data analysis, field work, and engineering design.
+        Some of my favorite things are guitars, sports cars, coffee, computers, and lots and lots of Lego.
+        I also love learning new things and dreaming up ways I can apply what I learn to solving real world problems and making the most of my time to make a positive impact.
+      </p>
+      <p>Thanks for stopping by and I hope you enjoy reading my blog as much as I enjoy writing it!</p>
+      <p>-Jeff</p>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+      const navbarCollapse = document.querySelector(".navbar-collapse");
+      const navbarToggler = document.querySelector(".navbar-toggler");
+
+      navLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+          const targetHref = this.getAttribute("href");
+
+          // Only handle internal links
+          if (targetHref && targetHref.startsWith("#")) {
+            e.preventDefault();
+
+            const targetSection = document.querySelector(targetHref);
+            if (targetSection) {
+              window.scrollTo({
+                top: targetSection.offsetTop - 80, // adjust for fixed navbar height
+                behavior: "smooth"
+              });
+            }
+
+            // Collapse navbar if it's open
+            if (navbarCollapse.classList.contains("show")) {
+              navbarToggler.click();
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
 </html>
